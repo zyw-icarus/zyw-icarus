@@ -8,7 +8,7 @@
   - 仓库卡片  github-readme-stats
               https://github.com/anuraghazra/github-readme-stats
   - 开源统计  .github/workflows/open-source-stats.yml
-              （每日统计公开仓库中被 merge 的 PR 数和项目数）
+              （每日统计公开仓库中被 merge 的 PR 数和项目数，并自动生成项目卡片）
   - 3D 贡献图 github-profile-3d-contrib
               https://github.com/yoshi389111/github-profile-3d-contrib
               （conf/profile-3d-contrib.json 定义蓝色系 day/night 两版，
