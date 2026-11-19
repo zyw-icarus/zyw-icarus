@@ -1,0 +1,43 @@
+name: Update open source stats
+
+on:
+  schedule:
+    # 18:20 UTC = 02:20 Asia/Shanghai (next day), after the 3D chart job
+    - cron: "20 18 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/open-source-stats.yml
+      - scripts/update-open-source-stats.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: open-source-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Update stats in README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+        run: python3 scripts/update-open-source-stats.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update open source stats"
+          git push
