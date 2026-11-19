@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Update stats in README
+      - name: Update stats and cards in README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
@@ -39,5 +39,5 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: update open source stats"
+          git commit -m "chore: update open source section"
           git push

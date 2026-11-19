@@ -61,7 +61,8 @@
 <p align="center"><sub><strong>2</strong> merged pull requests across <strong>2</strong> projects · latest Nov 2026</sub></p>
 <!-- OPEN-SOURCE-STATS:END -->
 
-<!-- 新增项目：复制一组 <a>…</a>，替换 owner/repo、链接和 alt；卡片由 github-readme-stats 生成 -->
+<!-- 项目卡片由 Action 自动生成：有新的 merged PR 会自动追加，按最近合并时间排序 -->
+<!-- OPEN-SOURCE-CARDS:START -->
 <p align="center">
   <a href="https://github.com/LeeRolling/dsh-boot-suite">
     <picture>
@@ -77,3 +78,4 @@
     </picture>
   </a>
 </p>
+<!-- OPEN-SOURCE-CARDS:END -->
