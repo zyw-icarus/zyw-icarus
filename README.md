@@ -2,7 +2,8 @@
   GitHub Profile README
 
   用到的服务 / 插件：
-  - 头图      capsule-render   https://github.com/kyechan99/capsule-render
+  - 头图      capsule-render（SVG 已存到 assets/，不依赖线上服务）
+              https://github.com/kyechan99/capsule-render
   - 徽章      shields.io       https://shields.io
   - 仓库卡片  github-readme-stats
               https://github.com/anuraghazra/github-readme-stats
@@ -20,9 +21,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE%2C60:3B82F6%2C100:8B5CF6&height=280&section=header&text=Mox Wang&fontSize=140&animation=fadeIn&fontAlignY=38&fontColor=F8FAFC" />
-  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=6FC7E1&height=280&section=header&text=Mox Wang&fontSize=140&animation=fadeIn&fontAlignY=38&fontColor=082F49" />
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6FC7E1&height=280&section=header&text=Mox Wang&fontSize=140&animation=fadeIn&fontAlignY=38&fontColor=082F49" alt="Mox" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg" />
+  <img src="./assets/header-light.svg" alt="Mox" width="100%" />
 </picture>
 
 <p>
